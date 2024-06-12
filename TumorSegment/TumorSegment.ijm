@@ -83,7 +83,7 @@ for(m = 0; m < dirList1.length; m++)
 		dirList3 = getFileList(path2);
 	    for (i = 0; i < dirList3.length; i++) 
 	    {	
-				if (endsWith(dirList3[i], "splicing.tif") == false) continue;
+				if (endsWith(dirList3[i], "stack.tif") == false) continue;
 				ImagePath = path2 + dirList3[i];
 				print(">now processing: " + ImagePath);
 				TumorSegment(ImagePath);
