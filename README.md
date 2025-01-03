@@ -1,4 +1,4 @@
-# TumorSegment   (ImageJMacrocode)
+# TumorSegment   (ImageJ Macrocode)
 
 This code is used to segment tumors in the lung lobes of mice and obtain information about the number, size and location of tumors. Prior to this, our data had been simply preprocessed.
 
