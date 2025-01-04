@@ -11,8 +11,7 @@ Usage: Run this code directly through ImageJ. After running, select the "TumorSe
 The algorithm is used to analyze the distribution of tumors within the mouse lung lobes. Specifically, it calculates the shortest distance from each tumor to the surface of the lung lobe.
 
 
-Usage:
-
+Usage:  
 1、Segment the mouse lung lobe image to obtain the binary image "lung_space.tif." This process can be quickly and accurately completed using the Labkit plugin in ImageJ.
 
 2、It is usually necessary to run the "img_processing.m" program to optimize the segmented mask, resulting in "lung_space_improve.tif."
