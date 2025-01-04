@@ -18,6 +18,6 @@ Usage:
 4、Use "lung_space_improve.tif," "tumor.tif," and the CSV statistical table as input to run the "surface_tumor.m" program. The program will generate a new XLSX file, where the distance information for each tumor will be automatically recorded in the first column of the table.
 
 # 3DResNet_tumor_classification   (Python)
-
+The algorithm is primarily used for the automatic classification of tumors in mouse lung lobes. Based on the statistical results from the "TumorSegment.ijm" algorithm, we crop the original lung lobe images to obtain individual tumor images. After expert diagnosis, we obtained labels for nearly 2,000 tumors (AAH, AD, AC). Our algorithm is based on a 3D ResNet18 deep learning model, which achieves an accuracy of 93% on the test dataset.
 
 
