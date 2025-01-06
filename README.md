@@ -7,7 +7,7 @@ The algorithm is used to segment tumors in the lung lobes of mice and obtain inf
 
 Usage: Run this code directly through ImageJ. After running, select the "TumorSegment_testdata" folder in "Choose the parent directory", and the macro code will run automatically. The path format for the data needs to be the same as our "TumorSegment_testdata". The code automatically recognizes ***stack.tif*** in the subfolder for processing, ***stack_Merge_v5.tif*** is the processed image result, and the ***.csv*** file is the processed statistics result.
 
-<img src="./images/stack.png" alt="stack.tif" width="400" height="400">
+<img src="./images/stack.png" alt="stack.tif" width="300" height="300">
 
 # Surface_tumor   (Matlab)
 
