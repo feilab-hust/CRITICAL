@@ -8,7 +8,7 @@ The algorithm is used to segment tumors in the lung lobes of mice and obtain inf
 Usage: Run this code directly through ImageJ. After running, select the "TumorSegment_testdata" folder in "Choose the parent directory", and the macro code will run automatically. The path format for the data needs to be the same as our "TumorSegment_testdata". The code automatically recognizes ***stack.tif*** in the subfolder for processing, ***stack_Merge_v5.tif*** is the processed image result, and the ***.csv*** file is the processed statistics result.
 
 ### Example images
-<img src="./images/stack.png" alt="stack.tif" height="300"> <img src="./images/stack_Merge_v5.png" alt="stack.tif" height="300"> <img src="./images/csv.png" alt="stack.tif" height="250">
+<img src="./images/stack.png" alt="stack.tif" height="300"> <img src="./images/stack_Merge_v5.png" alt="stack_Merge_v5.tif" height="300"> <img src="./images/csv.png" alt="*.csv" height="250">
 
 # Surface_tumor   (Matlab)
 
@@ -21,7 +21,7 @@ Usage:
 4、Use ***lung_space_improve.tif***, ***tumor.tif***, and the ***.csv*** statistical table as input to run the **surface_tumor.m** program. The program will generate a new XLSX file, where the distance information for each tumor will be automatically recorded in the first column of the table.
 
 ### Example images
-<img src="./images/lung_space.png" alt="stack.tif" height="300"> <img src="./images/lung_space_improve.png" alt="stack.tif" height="300"> <img src="./images/xlsx.png" alt="stack.tif" height="250">
+<img src="./images/lung_space.png" alt="lung_space.tif" height="300"> <img src="./images/lung_space_improve.png" alt="lung_space_improve.tif" height="300"> <img src="./images/tumor.png" alt="tumor.tif" height="300"> <img src="./images/xlsx.png" alt="*.xlsx" height="250">
 
 # 3DResNet_tumor_classification   (Python)
 The algorithm is primarily used for the automatic classification of tumors in mouse lung lobes. Based on the statistical results from the **TumorSegment.ijm** algorithm, we crop the original lung lobe images to obtain individual tumor images**(crop_tumor_LorR.m)**. After expert diagnosis, we obtained labels for nearly 2,000 tumors (AAH, AD, AC). Our algorithm is based on a 3D ResNet18 deep learning model, which achieves an accuracy of 93% on the test dataset.
