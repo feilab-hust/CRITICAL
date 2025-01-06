@@ -27,9 +27,9 @@ def main():
     TH = False   # 体积阈值：是否筛除掉体积过小和过大的肿瘤，在read_data里调整
     model = ResNet3D18_ADAC(num_classes)   # 选择模型，记得下面的路径同步改名
     # 数据集路径
-    data_dir = r'D:\Data\Python_Code\Github\Foundation Vision Model\Dataset\测试用'
+    data_dir = r'dataset_test/AD_AC'
     train_data_dir = os.path.join(data_dir, 'train')
-    test_data_dir = os.path.join(data_dir, 'test')
+    test_data_dir = os.path.join(data_dir, 'val')
     # 自动给保存模型参数的文件夹命名（model还需要手动改名）
     pth_dir = 'save_models/datasetADAC_models/ResNet18_datasetADAC_alltrain_size%d_batch%d'%(image_size[0],batch_size)
     if TH:
@@ -61,7 +61,7 @@ def main():
 
     print('开始训练')
     # 运行训练和测试循环
-    for epoch in range(1, epochs + 1):
+    for epoch in range(epochs):
 
         # lr递减
         if lr_decrease == True:
