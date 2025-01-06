@@ -1,6 +1,6 @@
 ## Test Data
 If you want to test our code, Please download the corresponding folder of the code, which contains our testdata. We have uploaded our test data to google drive, along with the ImageJ software that can run our code: **<https://drive.google.com/drive/folders/1nCuSpTXkkto2ZSKuN_eA7z6JRkfVCyiA?usp=sharing>**  
-The example images in the following text are all from the dataset *"TestData\57-1_LKB1-10W-2(1.26X)-20221120\488-40ms-5um-1.26X-lobe1"*.
+The example images in the following text are from: *"TestData\57-1_LKB1-10W-2(1.26X)-20221120\488-40ms-5um-1.26X-lobe1"*.
 
 # TumorSegment   (ImageJ Macrocode)
 
