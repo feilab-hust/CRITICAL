@@ -57,6 +57,6 @@ Run the following code to install all dependencies: `conda env create -f environ
 
 ### Usage:
 "main.py" is used to train the model, while "predict_AAH_AD_AC.py" is used for tumor classification.   
-Specifically, we classify the tumors into three types: atypical adenomatous hyperplasia (AAH), adenoma (AD), and adenocarcinoma (AC).Due to the nature of the dataset and labels, we performed two binary classifications. First, we classify AAH versus AD/AC, and then we classify AD versus AC.
+We classify the tumors into three types: atypical adenomatous hyperplasia (AAH), adenoma (AD), and adenocarcinoma (AC). However, due to the nature of the dataset and labels, we performed two binary classifications. First, we classify AAH versus AD/AC, and then we classify AD versus AC. Therefore, we provide two ".pth" pre-trained parameter files.
 
 ### The experimental results of the test dataset will be updated later……
