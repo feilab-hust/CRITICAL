@@ -59,7 +59,7 @@ def main():
     model.to(device)
     criterion = nn.CrossEntropyLoss()
 
-    print('开始训练')
+    print('Start training...')
     # 运行训练和测试循环
     for epoch in range(epochs):
 
