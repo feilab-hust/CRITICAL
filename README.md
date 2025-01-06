@@ -50,7 +50,7 @@ The algorithm is used to analyze the distribution of tumors within the mouse lun
 <img src="./images/ResNet.png" alt="ResNet" height="300">
 </p>
 
-The algorithm is primarily used for the automatic classification of tumors in mouse lung lobes. We classify the tumors into three types: atypical adenomatous hyperplasia (AAH), adenoma (AD), and adenocarcinoma (AC). Based on the statistical results from the **TumorSegment.ijm** algorithm, we crop the original lung lobe images to obtain individual tumor images(**crop_tumor_LorR.m**). After expert diagnosis, we obtained labels for nearly 2,000 tumors. Our algorithm is based on a 3D ResNet18 deep learning model, which achieves an accuracy of 93% on the test dataset.
+The algorithm is primarily used for the automatic classification of tumors in mouse lung lobes. We classify the tumors into three types: atypical adenomatous hyperplasia (AAH), adenoma (AD), and adenocarcinoma (AC). Based on the statistical results from the **TumorSegment.ijm** algorithm, we crop the original lung lobe images to obtain individual tumor images(**crop_tumor_LorR.m**). After expert diagnosis, we obtained labels for approximately 2,000 tumors. Our algorithm is based on a 3D ResNet18 deep learning model, which achieves an accuracy of 93% on the test dataset.
 
 ### Installation
 Run the following code to install all dependencies: `conda env create -f environment.yml`
