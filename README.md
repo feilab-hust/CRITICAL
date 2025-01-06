@@ -56,7 +56,7 @@ The algorithm is primarily used for the automatic classification of tumors in mo
 Run the following code to install all dependencies: `conda env create -f environment.yml`
 
 ### Usage:
-"main.py" is used to train the model, while "predict_AAH_AD_AC.py" is used for tumor classification.   
-Due to the nature of the dataset and labels, we performed two binary classifications to accomplish the three-class task. First, we classify AAH versus AD/AC, and then we classify AD versus AC. Therefore, we provide two ".pth" pre-trained parameter files.
+**"main.py"** is used to train the model, while **"predict_AAH_AD_AC.py"** is used for tumor classification.   
+Due to the nature of the dataset and labels, we performed two binary classifications to accomplish the three-class task. First, we classify AAH versus AD/AC, and then we classify AD versus AC. Therefore, we provide two **".pth"** pre-trained parameter files.
 
 ### The experimental results of the test dataset will be updated later……
