@@ -42,7 +42,7 @@ Usage:
 <img src="./images/lung_space.png" alt="lung_space.tif" height="250"> <img src="./images/lung_space_improve.png" alt="lung_space_improve.tif" height="250"> <img src="./images/tumor.png" alt="tumor.tif" height="250"> <img src="./images/xlsx.png" alt="*.xlsx" height="200">
 </p>
 
-# 3DResNet_tumor_classification   (Python)
+# ResNet3D_tumor_classification   (Python)
 
 ### Network Architecture
 <p align="center">
@@ -50,5 +50,8 @@ Usage:
 </p>
 
 The algorithm is primarily used for the automatic classification of tumors in mouse lung lobes. Based on the statistical results from the **TumorSegment.ijm** algorithm, we crop the original lung lobe images to obtain individual tumor images**(crop_tumor_LorR.m)**. After expert diagnosis, we obtained labels for nearly 2,000 tumors (AAH, AD, AC). Our algorithm is based on a 3D ResNet18 deep learning model, which achieves an accuracy of 93% on the test dataset.
+
+### Installation
+You can install the environment using conda: `conda env create -f environment.yml`
 
 ### The experimental results of the test dataset will be updated later……
