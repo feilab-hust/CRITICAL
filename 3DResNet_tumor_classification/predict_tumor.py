@@ -54,5 +54,7 @@ def predict(model, pth_path, data_dir):
 
 if __name__ == '__main__':
     pth_path = 'save_models/ResNet3D/model_77.pth'
-    predict(model = ResNet3D18_imgsize(num_classes=3), pth_path = pth_path, data_dir = 'D:/Data/Sunlab/Dataset_tumor/Test_Dataset_tumor')
+    predict(model = ResNet3D18_imgsize(num_classes=3), pth_path = pth_path, data_dir = 'D:/Data/Sunlab/Dataset_tumor/Test_Dataset_tumor/AAH')
+    predict(model = ResNet3D18_imgsize(num_classes=3), pth_path = pth_path, data_dir = 'D:/Data/Sunlab/Dataset_tumor/Test_Dataset_tumor/AD')
+    predict(model = ResNet3D18_imgsize(num_classes=3), pth_path = pth_path, data_dir = 'D:/Data/Sunlab/Dataset_tumor/Test_Dataset_tumor/AC')
 
