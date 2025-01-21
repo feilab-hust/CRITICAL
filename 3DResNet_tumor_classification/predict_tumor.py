@@ -1,6 +1,5 @@
 import glob
 import os
-import shutil
 
 import numpy as np
 import tifffile as tiff
@@ -33,7 +32,7 @@ def predict(model, pth_path, data_dir):
 
             imgsize = torch.tensor(img.shape[-3:]).unsqueeze(0).to(torch.float32)
 
-            # resize
+            # Resize3D -> 64
             img = F.interpolate(img.unsqueeze(0), size=(64, 64, 64), mode='trilinear', align_corners=False)
 
             img, imgsize = img.to(device), imgsize.to(device)
@@ -50,27 +49,10 @@ def predict(model, pth_path, data_dir):
 
             # print(f'{imgpath}:  {predicted.cpu().numpy()}')   # 输出每个肿瘤的预测结果
 
-            # 自动移动文件
-            # label = data_dir.split('/')[-1]
-            # savepath = os.path.join(r'D:\Data\Sunlab\Dataset_tumor\Test_Dataset_Wrong', label)
-            # if label == 'AAH':
-            #     if predicted != 0:
-            #         shutil.move(imgpath, savepath)
-            # elif label == 'AC':
-            #     if predicted != 1:
-            #         shutil.move(imgpath, savepath)
-            # elif label == 'AD':
-            #     if predicted != 2:
-            #         shutil.move(imgpath, savepath)
-            # else:
-            #     print('label有误！')
-
     print(f'AAH: {AAH}, AD: {AD}, AC: {AC}')
 
 
 if __name__ == '__main__':
-    pth_path = r'D:\Data\Python_Code\Github\ResNet3D\save_models\drop20_lr15-2\model_77.pth'
-    predict(model = ResNet3D18_imgsize(num_classes=3), pth_path = pth_path, data_dir = 'D:/Data/Sunlab/Dataset_tumor/Test_Dataset/AAH')
-    predict(model = ResNet3D18_imgsize(num_classes=3), pth_path = pth_path, data_dir = 'D:/Data/Sunlab/Dataset_tumor/Test_Dataset/AD')
-    predict(model = ResNet3D18_imgsize(num_classes=3), pth_path = pth_path, data_dir = 'D:/Data/Sunlab/Dataset_tumor/Test_Dataset/AC')
+    pth_path = './save_models/drop20_lr15-2/model_77.pth'
+    predict(model = ResNet3D18_imgsize(num_classes=3), pth_path = pth_path, data_dir = 'D:/Data/Sunlab/Dataset_tumor/Test_Dataset')
 
