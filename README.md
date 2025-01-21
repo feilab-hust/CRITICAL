@@ -50,9 +50,12 @@ The algorithm is used to analyze the distribution of tumors within the mouse lun
 <img src="./images/ResNet.png" alt="ResNet" height="300">
 </p>
 
-The algorithm is primarily used for the automatic classification of tumors in mouse lung lobes. We classify the tumors into three types: atypical adenomatous hyperplasia (AAH), adenoma (AD), and adenocarcinoma (AC). Our algorithm is based on a 3D ResNet18 deep learning model. 
+The algorithm is primarily used for the automatic classification of tumors in mouse lung lobes. We classify the tumors into three types: atypical adenomatous hyperplasia (AAH), adenoma (AD), and adenocarcinoma (AC). Our algorithm is based on a 3D ResNet18 deep learning model. Building upon this, we additionally introduced a simple fully connected layer to extract the raw size information of the tumor images. We merged this size information with the feature maps extracted by ResNet and input them together into the classification head at the backend for final classification, resulting in improved classification performance.
 
-Based on the statistical results from the **TumorSegment.ijm** algorithm, we crop the original lung lobe images to obtain individual tumor images(**crop_tumor_LorR.m**). After expert diagnosis, we obtained labels for approximately 2,000 tumors. Our algorithm is based on a 3D ResNet18 deep learning model, which achieves an accuracy of 93% on the test dataset.
+The model is trained using Python 3.9.21 and PyTorch 1.21.1 in the PyCharm IDE. We use a single RTX 3090 GPU for efficient computation, with the training duration typically under half an hour. The model can predict at a speed of approximately hundreds of tumors per second (excluding data loading time).
+
+### Data Acquisition
+Based on the statistical results from the **TumorSegment.ijm** algorithm, we crop the original lung lobe images to obtain individual tumor images(**crop_tumor_LorR.m**). To ensure the model's generalization, we randomly selected 2,953 tumors from 45 different genotypes of mice for the dataset. All tumor labels were manually annotated by multiple tumor experts. We randomly selected 2,000 tumors (AAH:AD:AC = 5:4:1) and divided them into training and validation dataset in an 8:2 ratio. The remaining 953 tumors were used as the test dataset.
 
 ### Installation
 Run the following code to install all dependencies: `conda env create -f environment.yml`
