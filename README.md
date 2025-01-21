@@ -50,7 +50,9 @@ The algorithm is used to analyze the distribution of tumors within the mouse lun
 <img src="./images/ResNet.png" alt="ResNet" height="300">
 </p>
 
-The algorithm is primarily used for the automatic classification of tumors in mouse lung lobes. We classify the tumors into three types: atypical adenomatous hyperplasia (AAH), adenoma (AD), and adenocarcinoma (AC). Based on the statistical results from the **TumorSegment.ijm** algorithm, we crop the original lung lobe images to obtain individual tumor images(**crop_tumor_LorR.m**). After expert diagnosis, we obtained labels for approximately 2,000 tumors. Our algorithm is based on a 3D ResNet18 deep learning model, which achieves an accuracy of 93% on the test dataset.
+The algorithm is primarily used for the automatic classification of tumors in mouse lung lobes. We classify the tumors into three types: atypical adenomatous hyperplasia (AAH), adenoma (AD), and adenocarcinoma (AC). Our algorithm is based on a 3D ResNet18 deep learning model. 
+
+Based on the statistical results from the **TumorSegment.ijm** algorithm, we crop the original lung lobe images to obtain individual tumor images(**crop_tumor_LorR.m**). After expert diagnosis, we obtained labels for approximately 2,000 tumors. Our algorithm is based on a 3D ResNet18 deep learning model, which achieves an accuracy of 93% on the test dataset.
 
 ### Installation
 Run the following code to install all dependencies: `conda env create -f environment.yml`
@@ -59,4 +61,10 @@ Run the following code to install all dependencies: `conda env create -f environ
 **"main.py"** is used to train the model, while **"predict_AAH_AD_AC.py"** is used for tumor classification.   
 Due to the nature of the dataset and labels, we performed two binary classifications to accomplish the three-class task. First, we classify AAH versus AD/AC, and then we classify AD versus AC. Therefore, we provide two **".pth"** pre-trained parameter files.
 
-### The experimental results of the test dataset will be updated later……
+### Performance analysis
+
+
+
+<p align="center">
+<img src="./images/confusion_matrix.png" alt="confusion_matrix" height="300"> <img src="./images/ROC_Curve.png" alt="ROC_Curve" height="300">
+</p>
