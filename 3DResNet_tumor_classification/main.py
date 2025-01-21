@@ -8,11 +8,11 @@ import torch.optim as optim
 from torchvision import transforms
 
 from ResNet_3D_model import ResNet3D18_imgsize
-from SWT_utils.Resize3D import Resize3D
-from SWT_utils.learning_rate import step_decay_scheduler
-from SWT_utils.load_trainval_data import load_trainval_data
-from SWT_utils.my_dataset import MyDataSetTIF
-from SWT_utils.utils import read_split_data
+from utils.Resize3D import Resize3D
+from utils.learning_rate import step_decay_scheduler
+from utils.load_trainval_data import load_trainval_data
+from utils.my_dataset import MyDataSetTIF
+from utils.utils import read_split_data
 from test import test
 from train import train
 
