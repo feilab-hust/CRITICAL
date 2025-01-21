@@ -19,7 +19,7 @@ from train import train
 
 def main():
 # 设置参数
-    pth_savepath = './save_models/newDataset/ResNet3D'    # 模型保存路径
+    pth_savepath = './save_models/ResNet3D'    # 模型保存路径
     # 设置GPU或CPU
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda:0" if use_cuda else "cpu")  # cuda报错没有可用的就改成cuda:0123
