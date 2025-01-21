@@ -61,12 +61,10 @@ Based on the statistical results from the **TumorSegment.ijm** algorithm, we cro
 Run the following code to install all dependencies: `conda env create -f environment.yml`
 
 ### Usage:
-**"main.py"** is used to train the model, while **"predict_AAH_AD_AC.py"** is used for tumor classification.   
-Due to the nature of the dataset and labels, we performed two binary classifications to accomplish the three-class task. First, we classify AAH versus AD/AC, and then we classify AD versus AC. Therefore, we provide two **".pth"** pre-trained parameter files.
+**"main.py"** is used to train the model, while **"predict_tumor.py"** is used for tumor classification.   
 
 ### Performance analysis
-
-
+We used multiple relevant metrics to evaluate the model's performance. First, in the five-fold cross-validation experiment, the average accuracy on the validation set was 94.58%. Then, we validated the model on a test set consisting of 953 tumors from different genotypes (AAH: 452, AD: 370, AC: 131), achieving an overall accuracy of 95.07%. In addition, we also calculated conventional metrics such as AUC (Area Under the Curve), recall, precision, specificity, and F1-score to assess the model's performance. These results can be found in the supplementary information of our paper.
 
 <p align="center">
 <img src="./images/confusion_matrix.png" alt="confusion_matrix" height="300"> <img src="./images/ROC_Curve.png" alt="ROC_Curve" height="300">
